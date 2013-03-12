@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Rename {
+public class Rename implements Runnable {
   /* Command:
              rename nameA nameB
              Action:
@@ -30,4 +30,10 @@ public class Rename {
 	  
 	  
   }
+
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	
+}
 }

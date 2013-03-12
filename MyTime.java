@@ -8,7 +8,7 @@ import java.util.Date;
            the current time is displayed.
   */
 
-public class MyTime{
+public class MyTime implements Runnable{
   public MyTime(){
     f();
   }
@@ -20,4 +20,10 @@ public class MyTime{
 	  System.out.println(dateFormat.format(date));
 	  
   }
+
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	
+}
 }

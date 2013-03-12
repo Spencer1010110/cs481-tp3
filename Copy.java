@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.StringTokenizer;
 
-public class Copy {
+public class Copy implements Runnable {
   /* Command::
    copy nameA nameB      where nameA and nameB must be the name of a files and their paths.
    Action:
@@ -80,6 +80,12 @@ public class Copy {
 	  }
 	}
   }
+
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	
+}
 }
 
 

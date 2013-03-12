@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Mkdir {
+public class Mkdir implements Runnable {
   /* Command:
            mkdir name
            Action:
@@ -30,4 +30,10 @@ public class Mkdir {
 			  file.mkdir();
 	  }
   }
+
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	
+}
 }

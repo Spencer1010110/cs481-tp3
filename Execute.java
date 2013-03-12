@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.StringTokenizer;
 import java.lang.reflect.*;
 
-public class Execute {
+public class Execute implements Runnable {
   /* Command::
          exec name word1 word2, ....   where name must the name of a java class and its paths
                                        and wordis are the arguments.
@@ -59,4 +59,10 @@ public class Execute {
 		  
 	  }
    }
+
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	
+}
 }

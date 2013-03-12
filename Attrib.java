@@ -1,8 +1,9 @@
 import java.io.*;
-import java.io.File;
 
-public class Attrib {
-  /* Command::
+public class Attrib implements Runnable {
+
+
+/* Command::
      attrib name       where name must be the name of a file and its path.
      Action:
      Makes the file read only.
@@ -14,8 +15,11 @@ public class Attrib {
      When there is an error println a message and return (not exit).
 
   */
-  public Attrib(String name){
-    f(name);
+	
+	private String name;
+	
+  public Attrib(String s_name){
+    this.name = s_name;
   }
 
   private void f(String name){
@@ -33,4 +37,12 @@ public class Attrib {
 			  file.setReadOnly();
 	  }
   }
+
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	f(name);
+}
+
+
 }

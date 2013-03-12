@@ -3,7 +3,7 @@ import java.text.*;
 
 import java.util.Date;
 
-public class MyDate{
+public class MyDate implements Runnable{
   /* Command:
            date
            Action:
@@ -20,4 +20,10 @@ public class MyDate{
 	  Date date = new Date();
 	  System.out.println(dateFormat.format(date));
   }
+
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	
+}
 }

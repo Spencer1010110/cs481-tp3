@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Dir {
+public class Dir implements Runnable {
   /* Command::
        dir name           where name must be null or the name of a directory and its paths.
        Action:
@@ -43,4 +43,10 @@ public class Dir {
 	           }
 		  }
 	 }
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
 }

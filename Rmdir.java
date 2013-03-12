@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Rmdir {
+public class Rmdir implements Runnable {
   /* Command:
                rmdir name
                Action:
@@ -36,4 +36,10 @@ public class Rmdir {
 	  }
 	  
   }
+
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	
+}
 }

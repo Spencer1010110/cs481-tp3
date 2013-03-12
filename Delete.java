@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Delete {
+public class Delete implements Runnable {
   /* Command::
      delete name           where name must be the name of a file and its paths.
      Action:
@@ -32,4 +32,10 @@ public class Delete {
 	  }
 	  
   }
+
+@Override
+public void run() {
+	// TODO Auto-generated method stub
+	
+}
 }

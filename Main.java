@@ -29,39 +29,39 @@ class Main {
             s = s.substring(1);
           switch (token.kind) {
             case Token.ATTRIB:
-              new Attrib(s);
+              new Thread(new Attrib(s)).start();
               break;
             case Token.COPY:
-              new Copy(s);
+            	 new Thread(new Copy(s)).start();
               break;
             case Token.DATE:
-              new MyDate();
+            	 new Thread(new MyDate()).start();
               break;
             case Token.DELETE:
-              new Delete(s);
+            	 new Thread(new Delete(s)).start();
               break;
             case Token.DIR:
-              new Dir(s);
+            	 new Thread(new Dir(s)).start();
               break;
             case Token.EDIT:
-              new Notepad();
+            	 new Thread(new Notepad()).start();
               break;
             case Token.EXEC:
-              new Execute(s);
+            	 new Thread(new Execute(s)).start();
               break;
             case Token.EXIT:
               System.exit(1);
             case Token.MKDIR:
-              new Mkdir(s);
+            	 new Thread(new Mkdir(s)).start();
               break;
             case Token.RENAME:
-              new Rename(s);
+            	 new Thread(new Rename(s)).start();
               break;
             case Token.RMDIR:
-              new Rmdir(s);
+            	 new Thread(new Rmdir(s)).start();
               break;
             case Token.TIME:
-              new MyTime();
+            	 new Thread(new MyTime()).start();
               break;
             default:
               System.out.println("Wrong command.");
