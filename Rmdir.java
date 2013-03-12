@@ -15,8 +15,9 @@ public class Rmdir implements Runnable {
   */
 
 
-  public Rmdir(String name){
-    f(name);
+	private String name;
+  public Rmdir(String s_name){
+    this.name = s_name;
   }
 
   private void f(String name){
@@ -40,6 +41,6 @@ public class Rmdir implements Runnable {
 @Override
 public void run() {
 	// TODO Auto-generated method stub
-	
+	f(name);
 }
 }

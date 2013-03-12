@@ -11,7 +11,7 @@ public class MyDate implements Runnable{
   */
 
   public MyDate(){
-    f();
+    //empty
   }
 
   private void f(){
@@ -24,6 +24,6 @@ public class MyDate implements Runnable{
 @Override
 public void run() {
 	// TODO Auto-generated method stub
-	
+	f();
 }
 }

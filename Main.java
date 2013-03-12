@@ -29,7 +29,7 @@ class Main {
             s = s.substring(1);
           switch (token.kind) {
             case Token.ATTRIB:
-              new Thread(new Attrib(s)).start();
+              new Thread(new Attrib(s)).start()).join();
               break;
             case Token.COPY:
             	 new Thread(new Copy(s)).start();

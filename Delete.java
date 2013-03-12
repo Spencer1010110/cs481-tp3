@@ -12,8 +12,9 @@ public class Delete implements Runnable {
      3. delete name          But the file name does is a directory.
      When there is an error println a message and return (not exit).
 */
-  public Delete(String name){
-    f(name);
+	private String name;
+  public Delete(String s_name){
+    this.name = s_name;
   }
 
   private void f(String name){
@@ -36,6 +37,6 @@ public class Delete implements Runnable {
 @Override
 public void run() {
 	// TODO Auto-generated method stub
-	
+	f(name);
 }
 }

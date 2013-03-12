@@ -22,8 +22,9 @@ public class Copy implements Runnable {
    When there is an error println a message and return (not exit).
 */
 
-  public Copy(String name) {
-    f(name);
+	private String name;
+  public Copy(String s_name) {
+    this.name = s_name;
   }
 
   private void f(String name) {
@@ -84,6 +85,7 @@ public class Copy implements Runnable {
 @Override
 public void run() {
 	// TODO Auto-generated method stub
+	f(name);
 	
 }
 }

@@ -13,8 +13,9 @@ public class Mkdir implements Runnable {
            When there is an error println a message and return (not exit).
   */
 
-  public Mkdir(String name){
-    f(name);
+	private String name;
+  public Mkdir(String s_name){
+    this.name = s_name;
   }
 
   private void f(String name){
@@ -34,6 +35,7 @@ public class Mkdir implements Runnable {
 @Override
 public void run() {
 	// TODO Auto-generated method stub
+	f(name);
 	
 }
 }

@@ -14,8 +14,9 @@ public class Rename implements Runnable {
     */
 
 
-  public Rename(String name) {
-    f(name);
+	private String name;
+  public Rename(String s_name) {
+    this.name = s_name;
   }
 
   private void f(String name) {
@@ -34,6 +35,6 @@ public class Rename implements Runnable {
 @Override
 public void run() {
 	// TODO Auto-generated method stub
-	
+	f(name);
 }
 }

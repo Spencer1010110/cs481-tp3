@@ -10,7 +10,7 @@ import java.util.Date;
 
 public class MyTime implements Runnable{
   public MyTime(){
-    f();
+   // empty
   }
 
   private void f(){
@@ -24,6 +24,6 @@ public class MyTime implements Runnable{
 @Override
 public void run() {
 	// TODO Auto-generated method stub
-	
+	 f();
 }
 }
