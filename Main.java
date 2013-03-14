@@ -75,11 +75,11 @@ class Main {
     	t_thread.join();
     	
     	
-    	t_thread = new Thread(new Execute("Producer.class"));
+    	t_thread = new Thread(new Execute("Producer.java"));
     	t_thread.start();
     	t_thread.run();
     	
-    	t_thread = new Thread(new Execute("Consumer.class"));
+    	t_thread = new Thread(new Execute("Consumer.java"));
     	t_thread.start();
     	t_thread.run();
       }
