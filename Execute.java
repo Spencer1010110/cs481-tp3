@@ -21,7 +21,7 @@ public class Execute implements Runnable {
     this.name = s_name;
   }
 
-  private void f(String name){
+  private void f(String name) throws InstantiationException, IllegalAccessException{
 	 
 	  if (name.equalsIgnoreCase(""))
 		  System.out.println("Class name not specified");
@@ -33,28 +33,9 @@ public class Execute implements Runnable {
 
 			else
 			{
-				Process thisProcess = null;			
-				String[] cmd = {"java", name};
-				
-				try{
-					thisProcess = Runtime.getRuntime().exec(cmd);
-				}
-				catch(IOException e)
-				{
-					System.err.println("Error on exec()");
-					e.printStackTrace();
-				}
-				
-				try{
-					// Can't get output?
-					PrintWriter output = new PrintWriter(thisProcess.getOutputStream());
-					output.println();
-				}
-				catch(Exception e)
-				{
-					System.err.println("Error on inStream.readLine()");
-					e.printStackTrace();
-				}
+			Class execClass = name.getClass();
+			execClass.newInstance();
+			execClass.main();
 				
 			}
 		  
@@ -64,6 +45,14 @@ public class Execute implements Runnable {
 @Override
 public void run() {
 	// TODO Auto-generated method stub
-	f(name);	
+	try {
+		f(name);
+	} catch (InstantiationException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (IllegalAccessException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}	
 }
 }
