@@ -35,7 +35,23 @@ public class Execute implements Runnable {
 			{
 			Class execClass = name.getClass();
 			execClass.newInstance();
-			execClass.main();
+			Method[] methods;
+			methods=execClass.getDeclaredMethods();
+			for(int i=0;i<methods.length;i++){
+				if (methods[i].getName().compareTo("Main")==1){
+					try {
+						methods[i].invoke(execClass, null);
+					} catch (IllegalArgumentException e) {
+						
+						e.printStackTrace();
+					} catch (InvocationTargetException e) {
+						
+						e.printStackTrace();
+					}
+				}
+				
+			}
+			
 				
 			}
 		  
